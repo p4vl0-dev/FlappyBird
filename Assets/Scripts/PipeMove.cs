@@ -8,10 +8,10 @@ public class PipeMove : MonoBehaviour
     private void Update(){
 
         if(ScoreManager.score == ScoreLimit){
-            speed += 1f;
+            speed += 0.4f;
             ScoreLimit +=10;
             if(Spawner.timeToSpawn > Spawner.MinTimeToSpawn){
-                Spawner.timeToSpawn -= 1f;
+                Spawner.timeToSpawn -= 0.4f;
             }
         }
         if(gameObject.transform.position.x <= -11){
