@@ -6,6 +6,8 @@ TagManager:
   tags:
   - pipePart
   - ScorePoint
+  - RestartButton
+  - MenuButton
   layers:
   - Default
   - TransparentFX
