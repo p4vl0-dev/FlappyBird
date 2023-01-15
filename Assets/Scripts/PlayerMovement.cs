@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour{
 
     private void Update(){
         if(Input.GetKeyDown(KeyCode.Space)){
-            Player.velocity = new Vector2(0f, 0f); //Скорость по осям, чтобы отталкиваться в любой точке при любой скорость падения - я убираю скорость по y на 0.
+            Player.velocity = new Vector2(0f, 0f); //Скорость по осям, чтобы отталкиваться в любой точке при любой скорости падения - я убираю скорость по y на 0. (Velocity - сопротивление воздуха)
             Player.AddForce(Vector2.up * 235);
         }
     }

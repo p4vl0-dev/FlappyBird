@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,7 +5,7 @@ public class GameManager: MonoBehaviour
 {
     public GameObject ScoreWindow;
     public GameObject LoseWindow;
-    public static GameManager instanceManager;
+    public static GameManager instanceManager; //Для использования не статичных методов в других скриптах(классах)
 
     private void Start(){
         instanceManager = this;
