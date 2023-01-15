@@ -1,12 +1,12 @@
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour{
-    public float jumpForce;
-    public Rigidbody2D rb;
+    public Rigidbody2D Player;
 
     private void Update(){
         if(Input.GetKeyDown(KeyCode.Space)){
-            rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+            Player.velocity = new Vector2(0f, 0f); //Скорость по осям, чтобы отталкиваться в любой точке при любой скорость падения - я убираю скорость по y на 0.
+            Player.AddForce(Vector2.up * 235);
         }
     }
 

@@ -825,8 +825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6615c4489589447ac58e82e21f8603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 5
-  rb: {fileID: 673359083}
+  Player: {fileID: 673359083}
 --- !u!50 &673359083
 Rigidbody2D:
   serializedVersion: 4
@@ -838,8 +837,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
+  m_UseAutoMass: 1
+  m_Mass: 0.9638193
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -1072,8 +1071,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pipePrefab: {fileID: 1708270078969843975, guid: 9d30ce8db384f2b47a934d15023c9301, type: 3}
-  minYPosition: -2.4
-  maxYPosition: 2.4
+  minYPosition: -2
+  maxYPosition: 2
 --- !u!4 &719774742
 Transform:
   m_ObjectHideFlags: 0
