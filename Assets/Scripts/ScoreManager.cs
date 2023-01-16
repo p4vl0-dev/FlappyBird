@@ -16,7 +16,12 @@ public class ScoreManager : MonoBehaviour
     }
 
     public void SetScore(){
-        scoreText.text = "Score: " + score.ToString();
+        if(score < 0){
+            GameManager.instanceManager.Lose();
+            scoreText.text = "You fool, why u cheat?";
+        } else {
+            scoreText.text = "Score: " + score.ToString();
+        }
     }
 
 }

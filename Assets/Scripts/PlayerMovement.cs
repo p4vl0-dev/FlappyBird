@@ -4,7 +4,7 @@ public class PlayerMovement : MonoBehaviour{
     public Rigidbody2D Player;
 
     private void Update(){
-        if(Input.GetKeyDown(KeyCode.Space)){
+        if((Input.GetKeyDown(KeyCode.Space)) || (Input.GetKeyDown(KeyCode.W)) || (Input.GetKeyDown(KeyCode.UpArrow))){
             Player.velocity = new Vector2(0f, 0f); //Скорость по осям, чтобы отталкиваться в любой точке при любой скорости падения - я убираю скорость по y на 0. (Velocity - сопротивление воздуха)
             Player.AddForce(Vector2.up * 235);
         }
