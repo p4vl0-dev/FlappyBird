@@ -7,27 +7,32 @@ public class GameManager: MonoBehaviour
     public GameObject LoseWindow;
     public static GameManager instanceManager; //Для использования не статичных методов в других скриптах(классах)
 
-    private void Start(){
+    private void Start()
+    {
         instanceManager = this;
     }
 
-    public void RestartScene(){
+    public void RestartScene()
+    {
         ScoreManager.score = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
     }
 
-    public void LoadScene(int sceneNumber){
+    public void LoadScene(int sceneNumber)
+    {
         SceneManager.LoadScene(sceneNumber);
         ScoreManager.score = 0;
         Time.timeScale = 1;
     }
 
-    public void Exit(){
+    public void Exit()
+    {
         Application.Quit();
     }
 
-    public void Lose(){
+    public void Lose()
+    {   
         Time.timeScale = 0;
         Spawner.SetDefaults();
         PipeMove.SetDefaults();

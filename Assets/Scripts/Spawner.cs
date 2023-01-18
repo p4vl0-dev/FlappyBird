@@ -7,19 +7,23 @@ public class Spawner : MonoBehaviour
     private float timer;
     public static float MinTimeToSpawn = 0.1f, timeToSpawn = 2f;
     
-    private void Update(){
-        if(timer <= 0){
+    private void Update()
+    {
+        if(timer <= 0)
+        {
             timer = timeToSpawn;
             GameObject pipe = Instantiate(pipePrefab, transform.position, Quaternion.identity);
             float rand = Random.Range(minYPosition, maxYPosition);
             pipe.transform.position = new Vector2(pipe.transform.position.x, rand);
         } 
-        else{
+        else
+        {
             timer -= Time.deltaTime;
         }
     }
 
-    public static void SetDefaults(){
+    public static void SetDefaults()
+    {
         timeToSpawn = 2f;
     }
 }

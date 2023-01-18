@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 4800911130085152854}
   m_Layer: 5
   m_Name: PipePillar
-  m_TagString: Untagged
+  m_TagString: pipePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 8343505505017596726}
   m_Layer: 5
   m_Name: PipePillar
-  m_TagString: Untagged
+  m_TagString: pipePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

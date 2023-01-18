@@ -7,15 +7,18 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private Text scoreText; // для отражения приватных перемен в инспекторе
     public static int score = 0;
 
-    public void Start(){
+    public void Start()
+    {
         Instance = this;
     }
 
-    private void Update(){
+    private void Update()
+    {
         SetScore();
     }
 
-    public void SetScore(){
+    public void SetScore()
+    {
         if(score < 0){
             GameManager.instanceManager.Lose();
             scoreText.text = "You fool, why u cheat?";
