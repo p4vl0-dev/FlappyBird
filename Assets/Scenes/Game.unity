@@ -1340,7 +1340,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.13000001, y: 0.136}
   m_AnchorMax: {x: 0.86451155, y: 0.26900002}
-  m_AnchoredPosition: {x: 10.570999, y: 67.999985}
+  m_AnchoredPosition: {x: 10.570984, y: 68}
   m_SizeDelta: {x: 4.26001, y: 4.1600037}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &929022941
@@ -1578,6 +1578,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreWindow: {fileID: 546333255}
   LoseWindow: {fileID: 312261659}
+  PauseMenu: {fileID: 1506956728}
+  isGameLosed: 0
 --- !u!4 &1397592216
 Transform:
   m_ObjectHideFlags: 0
@@ -1787,7 +1789,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.13000001, y: 0.39454815}
   m_AnchorMax: {x: 0.8794731, y: 0.528}
-  m_AnchoredPosition: {x: 5.236786, y: -1.2689972}
+  m_AnchoredPosition: {x: 5.2368164, y: -1.2689819}
   m_SizeDelta: {x: -3.8099976, y: 0.15000153}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1536629101
