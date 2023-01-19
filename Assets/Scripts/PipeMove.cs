@@ -11,7 +11,7 @@ public class PipeMove : MonoBehaviour
             speed += 0.4f;
             ScoreLimit +=10;
             if(Spawner.timeToSpawn > Spawner.MinTimeToSpawn){
-                Spawner.timeToSpawn -= 0.4f;
+                Spawner.timeToSpawn -= 0.3f;
             }
         }
         if(gameObject.transform.position.x <= -11){
