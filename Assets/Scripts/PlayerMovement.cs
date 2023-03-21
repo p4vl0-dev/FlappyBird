@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour{
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)&&GameManager.instanceManager.isGameLosed == false) //Не дает нажиматься кнопке ESC во время проигрыша
+        if(Input.GetKeyDown(KeyCode.Escape) && GameManager.instanceManager.isGameLosed == false) //Не дает нажиматься кнопке ESC во время проигрыша
         {   
             isGamePaused = !isGamePaused; //Переключатель паузы
             if(isGamePaused == true) //Запускает паузу
@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour{
             }
         }
 
-        if(((Input.GetKeyDown(KeyCode.Space)) || (Input.GetKeyDown(KeyCode.W)) || (Input.GetKeyDown(KeyCode.UpArrow)))&&(GameManager.instanceManager.isGameLosed == false)) 
+        if(((Input.GetKeyDown(KeyCode.Space)) || (Input.GetKeyDown(KeyCode.W)) || (Input.GetKeyDown(KeyCode.UpArrow))) && (GameManager.instanceManager.isGameLosed == false)) 
         //если игра не проиграна, то нажатия нужных клавиш проходит - иначе они отключаются
         {
             Player.velocity = new Vector2(0f, 0f); //Скорость по осям, чтобы отталкиваться в любой точке при любой скорости падения - я убираю скорость по y на 0. (Velocity - сопротивление воздуха)
@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour{
 
     private void OnCollisionEnter2D(Collision2D player) //При соприкосновении с коллайдером объектов
     {
-        if(player.gameObject.CompareTag("pipePart"))
+        if(player.gameObject.tag == "pipePart")
         {
             GameManager.instanceManager.Lose(); //Инициализирует проигрыш
         }
