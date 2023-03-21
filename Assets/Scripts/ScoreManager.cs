@@ -19,10 +19,13 @@ public class ScoreManager : MonoBehaviour
 
     public void SetScore()
     {
-        if(score < 0){
+        if(score < 0)
+        {
             GameManager.instanceManager.Lose();
             scoreText.text = "You fool, why u cheat?";
-        } else {
+        } 
+        else 
+        {
             scoreText.text = "Score: " + score.ToString();
         }
     }
