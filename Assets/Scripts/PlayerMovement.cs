@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour{
         //если игра не проиграна, то нажатия нужных клавиш проходит - иначе они отключаются
         {
             Player.velocity = new Vector2(0f, 0f); //Скорость по осям, чтобы отталкиваться в любой точке при любой скорости падения - я убираю скорость по y на 0. (Velocity - сопротивление воздуха)
-            Player.AddForce(Vector2.up * 235); //Прыжок
+            Player.AddForce(Vector2.up * 260); //Прыжок
         }
     }
 
