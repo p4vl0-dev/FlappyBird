@@ -7,7 +7,7 @@ public class GameManager: MonoBehaviour
     public GameObject LoseWindow;
     public GameObject PauseMenu;
     //HideInInspector - не показывает в инспекторе данное поле
-    [HideInInspector] public bool isGameLosed = false; //Поле, которое показывает - проиграна игра или нет. Помогает работать PauseMenu
+    [HideInInspector] public bool _isGameLosed = false; //Поле, которое показывает - проиграна игра или нет. Помогает работать PauseMenu
     
     public static GameManager instanceManager; //Для использования не статичных методов в других скриптах(классах)
 
@@ -37,7 +37,7 @@ public class GameManager: MonoBehaviour
 
     public void Lose()
     {   
-        isGameLosed = true; //Инициализирует проигрыш и не дает паузе открываться
+        _isGameLosed = true; //Инициализирует проигрыш и не дает паузе открываться
         Time.timeScale = 0;
         Spawner.SetDefaults();
         PipeMove.SetDefaults();
