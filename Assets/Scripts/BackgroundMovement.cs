@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class BackgroundMovement : MonoBehaviour
 {
-    public GameObject _background;
     private Transform _parentTransform;
     private float _speed;
     private float _currentScoreLimit;

@@ -37,12 +37,13 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision2D) //При соприкосновении с коллайдером объектов
+    private void OnCollisionEnter2D(Collision2D _collision2D) //При соприкосновении с коллайдером объектов
     {
-        if(collision2D.gameObject.tag == "pipePart")
+        if(_collision2D.gameObject.tag == "pipePart")
         {
             _audioSource.clip = _hitSound;
             _audioSource.Play();
+
             GameManager.instanceManager.Lose();
         }
     }
