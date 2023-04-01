@@ -3,25 +3,31 @@ using UnityEngine;
 public class PipeMove : MonoBehaviour
 {
     public static float speed = 3f;
-    public static int ScoreLimit = 10;
+    private static float _currentScoreLimit = ScoreManager.ScoreLimit;
 
-    private void Update(){
-
-        if(ScoreManager.score == ScoreLimit){
+    private void Update()
+    {
+        if(ScoreManager.score == _currentScoreLimit)
+        {
             speed += 0.4f;
-            ScoreLimit +=10;
-            if(Spawner.timeToSpawn > Spawner.MinTimeToSpawn){
+            _currentScoreLimit +=10;
+            if(Spawner.timeToSpawn > Spawner.MinTimeToSpawn && GameManager.instanceManager._isGameLosed == false)
+            {
                 Spawner.timeToSpawn -= 0.3f;
             }
         }
-        if(gameObject.transform.position.x <= -11){
+
+        if(gameObject.transform.position.x <= -11)
+        {
             Destroy(gameObject);
         }
-        transform.Translate(Vector2.left * speed * Time.deltaTime);
+
+        transform.position += new Vector3(-1,0) * speed * Time.deltaTime;
     }
 
-    public static void SetDefaults(){
+    public static void SetDefaults()
+    {
         speed = 3f;
-        ScoreLimit = 10;
+        _currentScoreLimit = 10;
     }
 }

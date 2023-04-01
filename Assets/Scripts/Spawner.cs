@@ -9,10 +9,10 @@ public class Spawner : MonoBehaviour
     
     private void Update()
     {
-        if(timer <= 0)
+        if(timer <= 0 && GameManager.instanceManager._isGameLosed == false)
         {
             timer = timeToSpawn;
-            GameObject pipe = Instantiate(pipePrefab, transform.position, Quaternion.identity);
+            GameObject pipe = Instantiate(pipePrefab, transform.position, Quaternion.identity, transform);
             float rand = Random.Range(minYPosition, maxYPosition);
             pipe.transform.position = new Vector2(pipe.transform.position.x, rand);
         } 
