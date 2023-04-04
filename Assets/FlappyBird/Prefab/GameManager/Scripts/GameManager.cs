@@ -38,9 +38,14 @@ public class GameManager: MonoBehaviour
     public void Lose()
     {   
         _isGameLosed = true; //Инициализирует проигрыш и не дает паузе открываться
+
+        ScoreManager.Instance.SetHighScore();
+        ScoreManager.Instance.SetHighScoreText();
+
         Time.timeScale = 0;
         PipeSpawner.SetDefaults();
         PipeMove.SetDefaults();
+
         LoseWindow.SetActive(true);
         ScoreWindow.SetActive(false);
         PauseMenu.SetActive(false);

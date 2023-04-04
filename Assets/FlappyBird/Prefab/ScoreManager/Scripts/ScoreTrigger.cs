@@ -10,6 +10,7 @@ public class ScoreTrigger : MonoBehaviour
         {
             audioSource.clip = pointSound;
             audioSource.Play();
+            
             ScoreManager.score += 1;
         }
     }
