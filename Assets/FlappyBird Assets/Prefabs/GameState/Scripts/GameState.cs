@@ -16,6 +16,7 @@ public class GameState : MonoBehaviour
         _isGameLost = true; //Инициализирует проигрыш и не дает паузе открываться
 
         HitEffect.PlayHitEffect();
+        DieRotation.PlayDieRotate();
     }
 
     public void Lose()

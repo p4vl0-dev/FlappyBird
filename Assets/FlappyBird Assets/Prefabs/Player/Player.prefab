@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4717873349153461479}
   - component: {fileID: 4717873349153461477}
   - component: {fileID: 3501281624564931282}
+  - component: {fileID: 371643447303211495}
   - component: {fileID: 1074627731}
   m_Layer: 0
   m_Name: Player
@@ -262,6 +263,18 @@ MonoBehaviour:
   audioSource: {fileID: 4717873349153461479}
   hitSound: {fileID: 8300000, guid: c149cf8fd3f95554fb29a67677c134fe, type: 3}
   dieSound: {fileID: 8300000, guid: 055f2cf7ccf22da47ad77eac520fbd18, type: 3}
+--- !u!114 &371643447303211495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4717873349153461478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 684061ec498cbcf4fb098df79d21ac52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &1074627731
 Animator:
   serializedVersion: 5
